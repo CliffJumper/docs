@@ -129,7 +129,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     ...
 
     const computeFirewall = new gcp.compute.Firewall("firewall", {
-        network: computeNetwork.id,
+        network: network.id,
         allows: [{
             protocol: "tcp",
             ports: [ "22", "80" ], // <-- ADD "80" HERE
